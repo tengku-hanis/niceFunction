@@ -18,3 +18,5 @@ Imports:
     stats
 Suggests: 
     testthat
+URL: https://github.com/tengku-hanis/niceFunction
+BugReports: https://github.com/tengku-hanis/niceFunction/issues

@@ -1,0 +1,20 @@
+Package: niceFunction
+Title: These are random nice functions that I found
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Tengku",
+           family = "Hanis",
+           role = c("aut", "cre"),
+           email = "donotemailt@example.com",
+           comment = c(ORCID = "https://orcid.org/0000-0003-1466-7765"))
+Description: These are all the random functions that I found on the internet. Some of these function,  I created it.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    graphics,
+    stats
+Suggests: 
+    testthat

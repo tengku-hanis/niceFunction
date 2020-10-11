@@ -32,10 +32,15 @@ devtools::install_github("tengku-hanis/niceFunction")
 
 This is a summary example which shows the use of each function:
 
-```{r example}
+```{r summary example}
 library(niceFunction)
-## basic example code
+
+## Histogram with normal curve
 histWithCurve(iris$Sepal.Length)
+
+## Regression diagnostic screening
+mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
+regDiag(mod)
 ```
 
 

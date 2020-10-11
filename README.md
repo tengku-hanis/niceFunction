@@ -26,8 +26,43 @@ This is a summary example which shows the use of each function:
 
 ``` r
 library(niceFunction)
-## basic example code
+
+## Histogram with normal curve
 histWithCurve(iris$Sepal.Length)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+``` r
+
+## Regression diagnostic screening
+mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
+regDiag(mod)
+#> $outlier
+#> $outlier$leverage
+#> leverage
+#> FALSE 
+#>   150 
+#> 
+#> $outlier$SDR
+#> SDR
+#> FALSE  TRUE 
+#>   148     2 
+#> 
+#> 
+#> $influence
+#> $influence$DFFits
+#> DFFits
+#> FALSE 
+#>   150 
+#> 
+#> $influence$DFBetas
+#> DFBetas
+#> FALSE 
+#>   600 
+#> 
+#> $influence$cook.d
+#> cook.d
+#> FALSE 
+#>   150
+```

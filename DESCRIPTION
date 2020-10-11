@@ -1,6 +1,6 @@
 Package: niceFunction
 Title: These are random nice functions that I found
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: 
     person(given = "Tengku",
            family = "Hanis",

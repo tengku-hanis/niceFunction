@@ -2,8 +2,7 @@
 % Please edit documentation in R/regDiag.R
 \name{regDiag}
 \alias{regDiag}
-\title{Regression diagnostic for outlier and influential case
-These function is only for screening}
+\title{Regression diagnostic}
 \usage{
 regDiag(model)
 }
@@ -34,8 +33,7 @@ DFBetas > 1
 cook.d > 0.5
 }
 \description{
-Regression diagnostic for outlier and influential case
-These function is only for screening
+\code{regDiag} is for screening of outliers and influential cases.
 }
 \examples{
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)

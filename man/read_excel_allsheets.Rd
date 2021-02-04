@@ -2,8 +2,7 @@
 % Please edit documentation in R/read_excel_allsheets.R
 \name{read_excel_allsheets}
 \alias{read_excel_allsheets}
-\title{Read all excel sheets
-Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767}
+\title{Read all excel sheets}
 \usage{
 read_excel_allsheets(filename, pages = sheets, tibble = FALSE)
 }
@@ -18,13 +17,14 @@ read_excel_allsheets(filename, pages = sheets, tibble = FALSE)
 
 }
 \description{
-Read all excel sheets
-Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
+\code{read_excel_allsheets} read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
 }
 \examples{
 ## Read all excel sheets
-# read_excel_allsheets("datasets")
+\dontrun{read_excel_allsheets("datasets")
+}
 
 ## Read several excel sheets
-# read_excel_allsheets("datasets", pages = 2:5)
+\dontrun{read_excel_allsheets("datasets", pages = 2:5)
+}
 }

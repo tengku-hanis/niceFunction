@@ -2,8 +2,7 @@
 % Please edit documentation in R/histWithCurve.R
 \name{histWithCurve}
 \alias{histWithCurve}
-\title{Histogram with curve
-Histogram with a normal density curve}
+\title{Histogram with curve}
 \usage{
 histWithCurve(x, breaks = 24)
 }
@@ -16,8 +15,7 @@ histWithCurve(x, breaks = 24)
 
 }
 \description{
-Histogram with curve
-Histogram with a normal density curve
+\code{histWithCurve} returns histogram with a normal density curve
 }
 \examples{
 histWithCurve(iris$Sepal.Length)

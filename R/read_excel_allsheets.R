@@ -1,5 +1,6 @@
 #' Read all excel sheets
-#' Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
+#'
+#' \code{read_excel_allsheets} read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
 #'
 #' @param filename excel files
 #' @param pages number of order of sheets in the excel (to select certain sheets)
@@ -10,10 +11,12 @@
 #'
 #' @examples
 #' ## Read all excel sheets
-#' # read_excel_allsheets("datasets")
+#' \dontrun{read_excel_allsheets("datasets")
+#' }
 #'
 #' ## Read several excel sheets
-#' # read_excel_allsheets("datasets", pages = 2:5)
+#' \dontrun{read_excel_allsheets("datasets", pages = 2:5)
+#' }
 read_excel_allsheets <- function(filename, pages = sheets, tibble = FALSE) {
   # I prefer straight data.frames
   # but if you like tidyverse tibbles (the default with read_excel)

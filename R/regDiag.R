@@ -1,5 +1,6 @@
-#' Regression diagnostic for outlier and influential case
-#' These function is only for screening
+#' Regression diagnostic
+#'
+#' \code{regDiag} is for screening of outliers and influential cases.
 #'
 #' @param model  lm or glm model
 #'

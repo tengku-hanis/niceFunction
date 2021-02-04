@@ -4,7 +4,6 @@
 # niceFunction
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of niceFunction is retain all random function that I found all
@@ -34,7 +33,6 @@ histWithCurve(iris$Sepal.Length)
 <img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
-
 ## Regression diagnostic screening
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 regDiag(mod)

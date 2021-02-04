@@ -1,8 +1,8 @@
 #' Histogram with curve
 #' Histogram with a normal density curve
 #'
-#' @param x  the vector or column name of a dataset
-#' @param breaks  number of bins
+#' @param x the vector or column name of a dataset
+#' @param breaks number of bins
 #'
 #' @return
 #' @export

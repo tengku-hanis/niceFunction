@@ -32,7 +32,7 @@ devtools::install_github("tengku-hanis/niceFunction")
 
 This is a summary example which shows the use of each function:
 
-```{r summary example}
+```{r example}
 library(niceFunction)
 
 ## Histogram with normal curve

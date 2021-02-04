@@ -1,6 +1,6 @@
 Package: niceFunction
 Title: These are random nice functions that I found
-Version: 1.0
+Version: 1.0.1
 Authors@R: 
     person(given = "Tengku",
            family = "Hanis",
@@ -15,7 +15,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     graphics,
-    stats
+    stats,
+    readxl
 Suggests: 
     testthat
 URL: https://github.com/tengku-hanis/niceFunction

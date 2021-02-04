@@ -1,5 +1,5 @@
 #' Read all excel sheets
-#' Read all excel sheets
+#' Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
 #'
 #' @param filename excel files
 #' @param pages number of order of sheets in the excel (to select certain sheets)

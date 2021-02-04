@@ -3,7 +3,7 @@
 \name{read_excel_allsheets}
 \alias{read_excel_allsheets}
 \title{Read all excel sheets
-Read all excel sheets}
+Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767}
 \usage{
 read_excel_allsheets(filename, pages = sheets, tibble = FALSE)
 }
@@ -19,7 +19,7 @@ read_excel_allsheets(filename, pages = sheets, tibble = FALSE)
 }
 \description{
 Read all excel sheets
-Read all excel sheets
+Read all excel sheets. Function was adapted from https://stackoverflow.com/a/12945838/11215767
 }
 \examples{
 ## Read all excel sheets

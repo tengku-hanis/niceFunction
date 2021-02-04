@@ -22,9 +22,9 @@ Read all excel sheets
 Read all excel sheets
 }
 \examples{
-# Read all excel sheets
+## Read all excel sheets
 # read_excel_allsheets("datasets")
 
-# Read several excel sheets
+## Read several excel sheets
 # read_excel_allsheets("datasets", pages = 2:5)
 }

@@ -6,12 +6,12 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of niceFunction is retain all random function that I found all
-over the books, forums, etc
+The goal of niceFunction is to retain all random function that I found
+all over the books, forums, etc
 
 ## Installation
 
-You can install the development version from
+You can install the the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -21,19 +21,25 @@ devtools::install_github("tengku-hanis/niceFunction")
 
 ## Example
 
-This is a summary example which shows the use of each function:
+This is a summary example which shows the use of each function. As of
+now, this package only have 4 functions: 1. histWithCurve 2. regDiag 3.
+read\_excel\_allsheets 4. changeType
 
 ``` r
 library(niceFunction)
+```
 
-## Histogram with normal curve
+histWithCurve give a histogram with normal curve
+
+``` r
 histWithCurve(iris$Sepal.Length)
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-histWithCurve-1.png" width="100%" />
+
+regDiag is used for screening of outliers and influential cases
 
 ``` r
-## Regression diagnostic screening
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 regDiag(mod)
 #> $outlier
@@ -63,4 +69,32 @@ regDiag(mod)
 #> cook.d
 #> FALSE 
 #>   150
+```
+
+read\_excel\_allsheets read all excel sheets or several excel sheets
+
+``` r
+## Read all excel sheets (not run)
+# read_excel_allsheets("datasets")
+
+## Read several excel sheets (not run)
+# read_excel_allsheets("datasets", pages = 2:5)
+```
+
+changeType change the variable type across list of data frames
+
+``` r
+# Make a list
+iris_list <- list(iris1 = iris, iris2 = iris)
+
+# Change one variable type
+iris_list <- lapply(iris_list, changeType, Var = "Sepal.Width", funct = "as.character")
+#> Warning in `[<-.data.frame`(`*tmp*`, , Var, value = list("3.5", "3", "3.2", :
+#> provided 150 variables to replace 1 variables
+
+#> Warning in `[<-.data.frame`(`*tmp*`, , Var, value = list("3.5", "3", "3.2", :
+#> provided 150 variables to replace 1 variables
+
+# Change 2 variables type
+iris_list <- lapply(iris_list, changeType, Var = c("Sepal.Length", "Species"), funct = "as.character")
 ```

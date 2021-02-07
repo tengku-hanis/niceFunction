@@ -22,8 +22,12 @@ devtools::install_github("tengku-hanis/niceFunction")
 ## Example
 
 This is a summary example which shows the use of each function. As of
-now, this package only have 4 functions: 1. histWithCurve 2. regDiag 3.
-read\_excel\_allsheets 4. changeType
+now, this package only have 4 functions:
+
+1.  histWithCurve
+2.  regDiag
+3.  read\_excel\_allsheets
+4.  changeType
 
 ``` r
 library(niceFunction)
@@ -89,11 +93,6 @@ iris_list <- list(iris1 = iris, iris2 = iris)
 
 # Change one variable type
 iris_list <- lapply(iris_list, changeType, Var = "Sepal.Width", funct = "as.character")
-#> Warning in `[<-.data.frame`(`*tmp*`, , Var, value = list("3.5", "3", "3.2", :
-#> provided 150 variables to replace 1 variables
-
-#> Warning in `[<-.data.frame`(`*tmp*`, , Var, value = list("3.5", "3", "3.2", :
-#> provided 150 variables to replace 1 variables
 
 # Change 2 variables type
 iris_list <- lapply(iris_list, changeType, Var = c("Sepal.Length", "Species"), funct = "as.character")

@@ -33,17 +33,23 @@ devtools::install_github("tengku-hanis/niceFunction")
 This is a summary example which shows the use of each function. As of now, this package only have 4 functions:
 
 1. histWithCurve
-2. regDiag
-3. read_excel_allsheets
-4. changeType
+2. histCurve
+3. regDiag
+4. read_excel_allsheets
+5. changeType
 
 ```{r example}
 library(niceFunction)
 ```
 
-histWithCurve give a histogram with normal curve
+histWithCurve give a histogram with a normal density curve
 ```{r histWithCurve}
 histWithCurve(iris$Sepal.Length)
+```
+
+histCurve give a ggplot2 histogram with a normal desnity curve
+```{r}
+histCurve(iris, Sepal.Length)
 ```
 
 regDiag is used for screening of outliers and influential cases

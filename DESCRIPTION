@@ -1,6 +1,6 @@
 Package: niceFunction
 Title: These are random nice functions that I found
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
     person(given = "Tengku",
            family = "Hanis",
@@ -12,12 +12,14 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Imports: 
     graphics,
     stats,
-    readxl
+    readxl, 
+    ggplot2
 Suggests: 
-    testthat
+    testthat (>= 3.0.0)
 URL: https://github.com/tengku-hanis/niceFunction
 BugReports: https://github.com/tengku-hanis/niceFunction/issues
+Config/testthat/edition: 3

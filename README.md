@@ -25,21 +25,30 @@ This is a summary example which shows the use of each function. As of
 now, this package only have 4 functions:
 
 1.  histWithCurve
-2.  regDiag
-3.  read\_excel\_allsheets
-4.  changeType
+2.  histCurve
+3.  regDiag
+4.  read_excel_allsheets
+5.  changeType
 
 ``` r
 library(niceFunction)
 ```
 
-histWithCurve give a histogram with normal curve
+histWithCurve give a histogram with a normal density curve
 
 ``` r
 histWithCurve(iris$Sepal.Length)
 ```
 
 <img src="man/figures/README-histWithCurve-1.png" width="100%" />
+
+histCurve give a ggplot2 histogram with a normal desnity curve
+
+``` r
+histCurve(iris, Sepal.Length)
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 regDiag is used for screening of outliers and influential cases
 
@@ -75,7 +84,7 @@ regDiag(mod)
 #>   150
 ```
 
-read\_excel\_allsheets read all excel sheets or several excel sheets
+read_excel_allsheets read all excel sheets or several excel sheets
 
 ``` r
 ## Read all excel sheets (not run)

@@ -22,7 +22,7 @@ devtools::install_github("tengku-hanis/niceFunction")
 ## Example
 
 This is a summary example which shows the use of each function. As of
-now, this package only have 4 functions:
+now, this package only have 6 functions:
 
 1.  histWithCurve
 2.  histCurve
@@ -33,10 +33,6 @@ now, this package only have 4 functions:
 
 ``` r
 library(niceFunction)
-#> Warning: replacing previous import 'dplyr::filter' by 'stats::filter' when
-#> loading 'niceFunction'
-#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
-#> 'niceFunction'
 ```
 
 histWithCurve give a histogram with a normal density curve

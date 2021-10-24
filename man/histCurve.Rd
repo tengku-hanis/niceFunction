@@ -14,7 +14,7 @@ histCurve(dat, column, bin = 24)
 \item{bin}{number of bins (default is 24)}
 }
 \value{
-
+a ggplot2 histogram with a normal density curve
 }
 \description{
 \code{histCurve} give histogram with density curve

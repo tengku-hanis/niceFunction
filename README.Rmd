@@ -34,9 +34,10 @@ This is a summary example which shows the use of each function. As of now, this 
 
 1. histWithCurve
 2. histCurve
-3. regDiag
-4. read_excel_allsheets
-5. changeType
+3. histNA_byVar
+4. regDiag
+5. read_excel_allsheets
+6. changeType
 
 ```{r example}
 library(niceFunction)
@@ -51,6 +52,15 @@ histCurve give a ggplot2 histogram with a normal desnity curve
 ```{r}
 histCurve(iris, Sepal.Length)
 ```
+
+histNA_byVar assess the distribution of NAs of certain variable is affected by another variable
+```{r}
+dat <- iris
+dat[dat$Species == "setosa", "Sepal.Length"] <- NA
+histNA_byVar(dat, Sepal.Length, Sepal.Width)
+#indicate right-tailed missingness
+```
+
 
 regDiag is used for screening of outliers and influential cases
 ```{r regdiag}

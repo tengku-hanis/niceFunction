@@ -26,12 +26,17 @@ now, this package only have 4 functions:
 
 1.  histWithCurve
 2.  histCurve
-3.  regDiag
-4.  read_excel_allsheets
-5.  changeType
+3.  histNA_byVar
+4.  regDiag
+5.  read_excel_allsheets
+6.  changeType
 
 ``` r
 library(niceFunction)
+#> Warning: replacing previous import 'dplyr::filter' by 'stats::filter' when
+#> loading 'niceFunction'
+#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
+#> 'niceFunction'
 ```
 
 histWithCurve give a histogram with a normal density curve
@@ -49,6 +54,21 @@ histCurve(iris, Sepal.Length)
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+histNA_byVar assess the distribution of NAs of certain variable is
+affected by another variable
+
+``` r
+dat <- iris
+dat[dat$Species == "setosa", "Sepal.Length"] <- NA
+histNA_byVar(dat, Sepal.Length, Sepal.Width)
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+
+``` r
+#indicate right-tailed missingness
+```
 
 regDiag is used for screening of outliers and influential cases
 

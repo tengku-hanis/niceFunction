@@ -2,9 +2,11 @@
 
 export(changeType)
 export(histCurve)
+export(histNA_byVar)
 export(histWithCurve)
 export(read_excel_allsheets)
 export(regDiag)
+import(dplyr)
 import(ggplot2)
 import(graphics)
 import(stats)

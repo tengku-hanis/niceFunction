@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @import ggplot2
+#' @importFrom stats sd density
 #'
 #' @examples
 #' histCurve(iris, Sepal.Length)

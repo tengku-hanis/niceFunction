@@ -12,6 +12,7 @@
 #'
 #' @import ggplot2
 #' @import dplyr
+#' @importFrom rlang .data
 #'
 #' @examples
 #' dat <- iris
@@ -25,7 +26,7 @@ histNA_byVar <- function(dat, NAvar, byvar, bin = 30){
       mutate(varNA = is.na({{NAvar}})) %>%
       ggplot(aes({{byvar}})) +
       geom_histogram(bins = {{bin}}) +
-      facet_grid(vars(varNA)) +
+      facet_grid(vars(.data$varNA)) +
       theme_minimal()
   } else {
     ## please install ggplot2 and dplyr packages

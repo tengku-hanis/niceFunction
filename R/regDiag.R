@@ -18,6 +18,8 @@
 #' @return cook.d > 0.5
 #' @export
 #'
+#' @importFrom stats cooks.distance dfbetas dffits hatvalues rstudent
+#'
 #' @examples
 #' mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 #' regDiag(mod)

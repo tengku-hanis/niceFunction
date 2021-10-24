@@ -15,10 +15,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     graphics,
+    dplyr,
+    rlang,
     stats,
     readxl, 
-    ggplot2,
-    dplyr
+    ggplot2
 Suggests: 
     testthat (>= 3.0.0)
 URL: https://github.com/tengku-hanis/niceFunction

@@ -19,25 +19,27 @@
 #' @export
 #'
 #' @importFrom stats cooks.distance dfbetas dffits hatvalues rstudent
+#' @importFrom knitr kable
 #'
 #' @examples
 #' mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 #' regDiag(mod)
-regDiag = function(model){
-  lev = hatvalues(model)
-  s.dr = rstudent(model)
-  dfit = dffits(model)
-  dbeta = dfbetas(model)
-  coo = cooks.distance(model)
+regDiag <-  function(model){
+  lev <-  hatvalues(model)
+  s.dr <-  rstudent(model)
+  dfit <-  dffits(model)
+  dbeta <-  dfbetas(model)
+  coo <-  cooks.distance(model)
 
-  leverage = lev >0.2
-  SDR = s.dr >=3 | s.dr <=-3
-  DFFits = dfit >1
-  DFBetas = dbeta >1
-  cook.d = coo >0.5
+  leverage <-  lev >0.2
+  SDR <-  s.dr >=3 | s.dr <=-3
+  DFFits <-  dfit >1
+  DFBetas <-  dbeta >1
+  cook.d <-  coo >0.5
 
-  outlier = list(leverage = table(leverage), SDR = table(SDR))
-  influence = list(DFFits = table(DFFits), DFBetas = table(DFBetas), cook.d = table(cook.d))
-  result = list(outlier = outlier, influence = influence)
-  return(result)
+  outlier <-  list(leverage = table(leverage), SDR = table(SDR))
+  influence <-  list(DFFits = table(DFFits), DFBetas = table(DFBetas), cook.d = table(cook.d))
+  result <-  list(outlier = outlier, influence = influence)
+  print(knitr::kable(result, "simple"))
 }
+

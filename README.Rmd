@@ -42,6 +42,7 @@ This is a summary example which shows the use of each function. As of now, this 
 
 ```{r example}
 library(niceFunction)
+library(dplyr)
 ```
 
 histWithCurve give a histogram with a normal density curve
@@ -65,9 +66,15 @@ histNA_byVar(dat, Sepal.Length, Sepal.Width)
 
 regDiag is used for screening of outliers and influential cases
 ```{r regdiag}
+# Create some outlier observations
+iris[151, ] <- c(9, 9, 9, 9, "virginica")
+iris <- iris %>% 
+  mutate(across(c(Sepal.Length:Petal.Width), as.numeric))
+
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 regDiag(mod)
 ```
+True indicate the presence of outliers and influential cases according that metrics and vice-versa
 
 read_excel_allsheets read all excel sheets or several excel sheets
 ```{r read_excel_allsheets}

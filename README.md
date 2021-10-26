@@ -35,6 +35,15 @@ now, this package only have 6 functions:
 
 ``` r
 library(niceFunction)
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
 ```
 
 histWithCurve give a histogram with a normal density curve
@@ -71,36 +80,42 @@ histNA_byVar(dat, Sepal.Length, Sepal.Width)
 regDiag is used for screening of outliers and influential cases
 
 ``` r
+# Create some outlier observations
+iris[151, ] <- c(9, 9, 9, 9, "virginica")
+iris <- iris %>% 
+  mutate(across(c(Sepal.Length:Petal.Width), as.numeric))
+
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 regDiag(mod)
-#> $outlier
-#> $outlier$leverage
-#> leverage
-#> FALSE 
-#>   150 
-#> 
-#> $outlier$SDR
-#> SDR
-#> FALSE  TRUE 
-#>   148     2 
 #> 
 #> 
-#> $influence
-#> $influence$DFFits
-#> DFFits
-#> FALSE 
-#>   150 
+#> leverage    Freq
+#> ---------  -----
+#> FALSE        150
+#> TRUE           1
 #> 
-#> $influence$DFBetas
-#> DFBetas
-#> FALSE 
-#>   600 
+#> SDR      Freq
+#> ------  -----
+#> FALSE     148
+#> TRUE        3
 #> 
-#> $influence$cook.d
-#> cook.d
-#> FALSE 
-#>   150
+#> DFFits    Freq
+#> -------  -----
+#> FALSE      151
+#> 
+#> DFBetas    Freq
+#> --------  -----
+#> FALSE       603
+#> TRUE          1
+#> 
+#> cook.d    Freq
+#> -------  -----
+#> FALSE      150
+#> TRUE         1
 ```
+
+True indicate the presence of outliers and influential cases according
+that metrics and vice-versa
 
 read_excel_allsheets read all excel sheets or several excel sheets
 

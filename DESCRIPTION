@@ -17,6 +17,7 @@ Imports:
     graphics,
     dplyr,
     rlang,
+    knitr,
     stats,
     readxl, 
     ggplot2

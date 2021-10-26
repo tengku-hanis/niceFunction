@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/tengku-hanis/niceFunction/workflows/R-CMD-check/badge.svg)](https://github.com/tengku-hanis/niceFunction/actions)
 <!-- badges: end -->
 
-The goal of niceFunction is to retain all random function that I found all over the books, forums, etc
+The goal of niceFunction is to retain all random function that I found all over the books, forums, etc.
 
 ## Installation
 
@@ -45,26 +45,25 @@ library(niceFunction)
 library(dplyr)
 ```
 
-histWithCurve give a histogram with a normal density curve
+histWithCurve give a histogram with a normal density curve.
 ```{r histWithCurve}
 histWithCurve(iris$Sepal.Length)
 ```
 
-histCurve give a ggplot2 histogram with a normal density curve
+histCurve give a ggplot2 histogram with a normal density curve.
 ```{r}
 histCurve(iris, Sepal.Length)
 ```
 
-histNA_byVar assess the distribution of NAs of certain variable is affected by another variable
+histNA_byVar assess the distribution of NAs of certain variable is affected by another variable.
 ```{r}
 dat <- iris
 dat[dat$Species == "setosa", "Sepal.Length"] <- NA
 histNA_byVar(dat, Sepal.Length, Sepal.Width)
-#indicate right-tailed missingness
 ```
+The histogram with NA values (label by True) indicate a right-tailed missingness compared to the histogram with no NAs (label by False).
 
-
-regDiag is used for screening of outliers and influential cases
+regDiag is used for screening of outliers and influential cases.
 ```{r regdiag}
 # Create some outlier observations
 iris[151, ] <- c(9, 9, 9, 9, "virginica")
@@ -74,9 +73,9 @@ iris <- iris %>%
 mod <- lm(Sepal.Length ~ Species + Sepal.Width, data = iris)
 regDiag(mod)
 ```
-True indicate the presence of outliers and influential cases according that metrics and vice-versa
+True indicate the presence of outliers and/or influential cases according to that metrics and vice-versa.
 
-read_excel_allsheets read all excel sheets or several excel sheets
+read_excel_allsheets read all excel sheets or several excel sheets.
 ```{r read_excel_allsheets}
 ## Read all excel sheets (not run)
 # read_excel_allsheets("datasets")
@@ -85,7 +84,7 @@ read_excel_allsheets read all excel sheets or several excel sheets
 # read_excel_allsheets("datasets", pages = 2:5)
 ```
 
-changeType change the variable type across list of data frames
+changeType change the variable type across list of data frames.
 ```{r changeType, warning=FALSE}
 # Make a list
 iris_list <- list(iris1 = iris, iris2 = iris)

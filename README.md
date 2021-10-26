@@ -9,7 +9,7 @@
 <!-- badges: end -->
 
 The goal of niceFunction is to retain all random function that I found
-all over the books, forums, etc
+all over the books, forums, etc.
 
 ## Installation
 
@@ -46,7 +46,7 @@ library(dplyr)
 #>     intersect, setdiff, setequal, union
 ```
 
-histWithCurve give a histogram with a normal density curve
+histWithCurve give a histogram with a normal density curve.
 
 ``` r
 histWithCurve(iris$Sepal.Length)
@@ -54,7 +54,7 @@ histWithCurve(iris$Sepal.Length)
 
 <img src="man/figures/README-histWithCurve-1.png" width="100%" />
 
-histCurve give a ggplot2 histogram with a normal density curve
+histCurve give a ggplot2 histogram with a normal density curve.
 
 ``` r
 histCurve(iris, Sepal.Length)
@@ -63,7 +63,7 @@ histCurve(iris, Sepal.Length)
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 histNA_byVar assess the distribution of NAs of certain variable is
-affected by another variable
+affected by another variable.
 
 ``` r
 dat <- iris
@@ -71,13 +71,11 @@ dat[dat$Species == "setosa", "Sepal.Length"] <- NA
 histNA_byVar(dat, Sepal.Length, Sepal.Width)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" /> The
+histogram with NA values (label by True) indicate a right-tailed
+missingness compared to the histogram with no NAs (label by False).
 
-``` r
-#indicate right-tailed missingness
-```
-
-regDiag is used for screening of outliers and influential cases
+regDiag is used for screening of outliers and influential cases.
 
 ``` r
 # Create some outlier observations
@@ -114,10 +112,10 @@ regDiag(mod)
 #> TRUE         1
 ```
 
-True indicate the presence of outliers and influential cases according
-that metrics and vice-versa
+True indicate the presence of outliers and/or influential cases
+according to that metrics and vice-versa.
 
-read_excel_allsheets read all excel sheets or several excel sheets
+read_excel_allsheets read all excel sheets or several excel sheets.
 
 ``` r
 ## Read all excel sheets (not run)
@@ -127,7 +125,7 @@ read_excel_allsheets read all excel sheets or several excel sheets
 # read_excel_allsheets("datasets", pages = 2:5)
 ```
 
-changeType change the variable type across list of data frames
+changeType change the variable type across list of data frames.
 
 ``` r
 # Make a list

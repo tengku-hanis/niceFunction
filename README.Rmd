@@ -49,7 +49,7 @@ histWithCurve give a histogram with a normal density curve
 histWithCurve(iris$Sepal.Length)
 ```
 
-histCurve give a ggplot2 histogram with a normal desnity curve
+histCurve give a ggplot2 histogram with a normal density curve
 ```{r}
 histCurve(iris, Sepal.Length)
 ```

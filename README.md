@@ -45,7 +45,7 @@ histWithCurve(iris$Sepal.Length)
 
 <img src="man/figures/README-histWithCurve-1.png" width="100%" />
 
-histCurve give a ggplot2 histogram with a normal desnity curve
+histCurve give a ggplot2 histogram with a normal density curve
 
 ``` r
 histCurve(iris, Sepal.Length)

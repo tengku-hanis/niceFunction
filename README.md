@@ -4,6 +4,8 @@
 # niceFunction
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/tengku-hanis/niceFunction/workflows/R-CMD-check/badge.svg)](https://github.com/tengku-hanis/niceFunction/actions)
 <!-- badges: end -->
 
 The goal of niceFunction is to retain all random function that I found
